@@ -5,17 +5,17 @@ it ('upper nave should work', function(){
     
     // //Home anchor
     cy.contains('Home').should('be.visible').click()
-    cy.url().should('include', '#intro')
+    .url().should('include', '#intro')
     
 
     //About anchor
     cy.contains('About').click()
-    cy.url().should('include','#about')
+    .url().should('include','#about')
     .get('#about').should('contain', 'About Me')
 
  
     //Contact anchor
     cy.contains('Contact').click()
-    cy.url().should('include','#contact')
-    cy.get('#contact').should('contain', 'Contact me')
+    .url().should('include','#contact')
+    .get('#contact').should('contain', 'Contact me')
 })
